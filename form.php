@@ -37,22 +37,53 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f4f7f6;
+            background-color: #1b1b1b; 
+            color: #fff;
         }
         .registration-form {
             width: 50%;
             margin: 50px auto;
-            background-color: #fff;
+            background-color: #2b2b2b; 
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
         }
         h2 {
             margin-bottom: 20px;
+            color: #e63946; 
+        }
+        .form-control {
+            background-color: #333; 
+            border: 1px solid #e63946; 
+            color: #fff;
+        }
+        .form-control::placeholder {
+            color: #bbb; 
         }
         .form-control:focus {
-            border-color: #007bff;
-            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+            border-color: #e63946; 
+            box-shadow: 0 0 0 0.2rem rgba(230, 57, 70, 0.25); 
+        }
+        .form-select {
+            background-color: #333;
+            border: 1px solid #e63946;
+            color: #fff;
+        }
+        .form-select:focus {
+            border-color: #e63946;
+            box-shadow: 0 0 0 0.2rem rgba(230, 57, 70, 0.25);
+        }
+        .btn-primary {
+            background-color: #e63946; 
+            border-color: #e63946;
+        }
+        .btn-primary:hover {
+            background-color: #d62828; 
+            border-color: #d62828;
+        }
+        .btn-primary:focus {
+            background-color: #e63946;
+            box-shadow: 0 0 0 0.2rem rgba(230, 57, 70, 0.5);
         }
     </style>
 </head>
