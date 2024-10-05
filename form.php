@@ -17,4 +17,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Invalid email format");
     }
 
+    if (strlen($password) < 6) {
+        die("Password must be at least 6 characters long");
+    }
+
 }
