@@ -37,4 +37,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <h2>User Registration Form</h2>
     <form action="form.php" method="POST">
+    Full Name: <input type="text" name="fullname" required><br><br>
+    Gender: 
+        <select name="gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select><br><br> 
 </body>
