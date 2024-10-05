@@ -59,6 +59,16 @@ $users = $user->getUsers();
     <div class="user-table">
         <h2>Registered Users</h2>
         <table class="table table-bordered table-hover">
-            
+        <thead>
+                <tr>
+                    <th>UserID</th>
+                    <th>Full Name</th>
+                    <th>Gender</th>
+                    <th>Date of Birth</th>
+                    <th>Email</th>
+                    <th>Residence</th>
+                    <th>Registration Date</th>
+                </tr>
+            </thead>
     </body>
     </html>
