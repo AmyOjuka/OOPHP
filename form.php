@@ -21,4 +21,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Password must be at least 6 characters long");
     }
 
+    $user = new User();
+    $result = $user->registerUser($fullname, $gender, $dob, $email, $residence, $password);
+    echo $result;
+
 }
