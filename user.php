@@ -12,22 +12,26 @@ class User implements UserInterface {
 }
 
 public function registerUser($fullname, $gender, $dob, $email, $residence, $password) {
-    $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+    $hashedPassword = password_hash($password, PASSWORD_BCRYPT); // Hash the password
 
+    // SQL query to insert the user details
     $sql = "INSERT INTO userDetails (fullname, gender, DateofBirth, email, residence, password)
-                VALUES (:fullname, :gender, :dob, :email, :residence, :password)";
+            VALUES (:fullname, :gender, :dob, :email, :residence, :password)";
+    $stmt = $this->conn->prepare($sql);
+    $stmt->bindParam(':fullname', $fullname);
+    $stmt->bindParam(':gender', $gender);
+    $stmt->bindParam(':dob', $dob);
+    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':residence', $residence);
+    $stmt->bindParam(':password', $hashedPassword);
 
-        $stmt = $this->conn->prepare($sql);
-        $stmt->bindParam(':fullname', $fullname);
-        $stmt->bindParam(':gender', $gender);
-        $stmt->bindParam(':dob', $dob);
-        $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':residence', $residence);
-        $stmt->bindParam(':password', $hashedPassword);
-
-        if ($stmt->execute()) {
-            return "User registered successfully!";
-        } else {
-            return "Error: " . $stmt->errorInfo()[2];
-        }
+    if ($stmt->execute()) {
+        return "User registered successfully!";
+    } else {
+        return "Error: " . $stmt->errorInfo()[2];
+    }
 }
+
+    public function getUsers() {
+        
+    }
