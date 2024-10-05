@@ -5,12 +5,12 @@ USE `UserDB`;
 DROP TABLE IF EXISTS `gender`;
 CREATE TABLE IF NOT EXISTS `userDetails` (
     `userId` tinyint(1) NOT NULL AUTO_INCREMENT,
-    'Name' VARCHAR(255) NOT NULL,
+    `fullname` VARCHAR(255) NOT NULL,
     `gender` varchar(20) NOT NULL,
-    'DateOfBirth' DATE NOT NULL,
-    'Email' VARCHAR(255) NOT NULL UNIQUE,
-    'Residence' VARCHAR(255) NOT NULL,
-    'RegistrationDate' TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    'Password' VARCHAR(255) NOT NULL,
+    `DateofBirth` DATE NOT NULL,
+    `email` VARCHAR(255) NOT NULL UNIQUE,
+    `residence` VARCHAR(255) NOT NULL,
+    `regdate` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    `password` VARCHAR(255) NOT NULL,
     PRIMARY KEY (`userId`)
 );
