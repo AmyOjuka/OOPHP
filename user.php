@@ -17,4 +17,13 @@ public function registerUser($fullname, $gender, $dob, $email, $residence, $pass
     $sql = "INSERT INTO userDetails (fullname, gender, DateofBirth, email, residence, password)
                 VALUES (:fullname, :gender, :dob, :email, :residence, :password)";
 
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(':fullname', $fullname);
+        $stmt->bindParam(':gender', $gender);
+        $stmt->bindParam(':dob', $dob);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':residence', $residence);
+        $stmt->bindParam(':password', $hashedPassword);
+
+
 }
