@@ -45,5 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </select><br><br> 
         Date of Birth: <input type="date" name="dob" required><br><br>
         Email: <input type="email" name="email" required><br><br>
+        Residence: <input type="text" name="residence" required><br><br>
+        Password: <input type="password" name="password" required><br><br>
 
 </body>
