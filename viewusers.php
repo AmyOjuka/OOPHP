@@ -52,3 +52,13 @@ $users = $user->getUsers();
             background-color: #444; 
         }
     </style>
+    </head>
+    <body>
+
+    <div class="container">
+    <div class="user-table">
+        <h2>Registered Users</h2>
+        <table class="table table-bordered table-hover">
+            
+    </body>
+    </html>
