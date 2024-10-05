@@ -33,5 +33,5 @@ public function registerUser($fullname, $gender, $dob, $email, $residence, $pass
 }
 
     public function getUsers() {
-        
+        $sql = "SELECT * FROM userDetails";
     }
