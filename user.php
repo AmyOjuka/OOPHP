@@ -14,5 +14,7 @@ class User implements UserInterface {
 public function registerUser($fullname, $gender, $dob, $email, $residence, $password) {
     $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
 
+    $sql = "INSERT INTO userDetails (fullname, gender, DateofBirth, email, residence, password)
+                VALUES (:fullname, :gender, :dob, :email, :residence, :password)";
 
 }
