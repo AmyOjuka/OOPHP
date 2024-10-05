@@ -13,4 +13,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $residence = sanitizeInput($_POST['residence']);
     $password = sanitizeInput($_POST['password']);
 
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        die("Invalid email format");
+    }
+
 }
