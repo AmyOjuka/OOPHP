@@ -47,6 +47,7 @@ $users = $user->getUsers();
         }
         td {
             background-color: #2b2b2b;
+            color: #fff; 
         }
         tr:hover td {
             background-color: #444; 
