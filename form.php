@@ -24,5 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = new User();
     $result = $user->registerUser($fullname, $gender, $dob, $email, $residence, $password);
     echo $result;
-
 }
+?>
+
+<!DOCTYPE html>
