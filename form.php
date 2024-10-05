@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         Email: <input type="email" name="email" required><br><br>
         Residence: <input type="text" name="residence" required><br><br>
         Password: <input type="password" name="password" required><br><br>
-        
+        <input type="submit" value="Register">    
     </form>
 </body>
 </html>
