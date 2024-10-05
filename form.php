@@ -43,4 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <option value="Male">Male</option>
             <option value="Female">Female</option>
         </select><br><br> 
+        Date of Birth: <input type="date" name="dob" required><br><br>
+        Email: <input type="email" name="email" required><br><br>
+
 </body>
