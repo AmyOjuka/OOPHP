@@ -10,3 +10,8 @@ class User implements UserInterface {
         $this->conn = $db->connect();
     }
 }
+
+public function registerUser($fullname, $gender, $dob, $email, $residence, $password) {
+
+
+}
