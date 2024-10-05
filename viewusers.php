@@ -70,5 +70,23 @@ $users = $user->getUsers();
                     <th>Registration Date</th>
                 </tr>
             </thead>
+
+            <tbody>
+                <?php foreach ($users as $user): ?>
+                <tr>
+                    <td><?= $user['userId']; ?></td>
+                    <td><?= $user['fullname']; ?></td>
+                    <td><?= $user['gender']; ?></td>
+                    <td><?= $user['DateofBirth']; ?></td>
+                    <td><?= $user['email']; ?></td>
+                    <td><?= $user['residence']; ?></td>
+                    <td><?= $user['regdate']; ?></td>
+                </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+</div>
+
     </body>
     </html>
