@@ -25,5 +25,9 @@ public function registerUser($fullname, $gender, $dob, $email, $residence, $pass
         $stmt->bindParam(':residence', $residence);
         $stmt->bindParam(':password', $hashedPassword);
 
-
+        if ($stmt->execute()) {
+            return "User registered successfully!";
+        } else {
+            return "Error: " . $stmt->errorInfo()[2];
+        }
 }
