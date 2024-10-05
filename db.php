@@ -7,3 +7,9 @@ class Database {
     public $conn;
 
 }
+
+public function connect() {
+    $this->conn = null;
+
+
+}
