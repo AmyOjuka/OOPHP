@@ -12,6 +12,7 @@ class User implements UserInterface {
 }
 
 public function registerUser($fullname, $gender, $dob, $email, $residence, $password) {
+    $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
 
 
 }
