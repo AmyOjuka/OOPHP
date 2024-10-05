@@ -34,3 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Registration</title>
 </head>
+<body>
+    <h2>User Registration Form</h2>
+    <form action="form.php" method="POST">
+</body>
